@@ -1,0 +1,30 @@
+this is python code to control the stepper motor, power relay, and camera module with a Raspberry Pi 
+to have remote access to the high temperature resonant ultrasound spectroscopy setup (i.e. the hotplate)
+
+to control any of these instruments open python3 in the directory and type:
+  from steppermotor import StepperMotor
+  from powerrelay import PowerRelay
+  from cameramodule import CameraModule
+
+about the stepper motor:
+  sm = StepperMotor(position=0) #initializes the stepper motor; it's initial position is set to 0, but can be adjusted and given a 
+                                #specific angle
+  sm.get_angle() #gives the current angle of the stepper motor
+  sm.set_new_zero() #labels the current position of the stepper motor as "zero"
+  sm.turn(angle, direction) #turn the stepper motor by an "angle" in a certain "direction" 
+                            #- options are 'cw'/'ccw' for clockwise/counterclockwise
+  sm.set_angle(angle) #set the angle of the stepper motor to a specific "angle";
+                      #angles are counted clockwise starting from the "zero" position of the stepper motor
+  sm.set_dial(number) #set the stepper motor to a certain angle, such that the dial of the hot plate is at "number"
+  sm.end() #turn stepper motor to its "zero" position; NOTE THAT IT ALSO TURNS OFF THE CONTROL OF THE POWER RELAY
+  
+about the power relay:
+  pr = PowerRelay() #initializes an instance of power relay
+  pr.mode(mode) #you can turn the power relay "on" or "off" - these are relative to the "normally on" plugs at the relay
+  
+about the camera module:
+  camera = CameraModule()
+  camera.show(seconds=5) #shows a live video captured by the camera; 
+                         # by default, the video is shown for 5 seconds, but the "seconds" can be specified
+  
+  
