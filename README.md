@@ -31,8 +31,8 @@ detailed information about the kinds of classes and functions defined for them c
 
 ### about the camera module:
   - camera = CameraModule()
-  - camera.show(seconds=5) #shows a live video captured by the camera; 
-                         # by default, the video is show
+  - camera.start() starts live stream
+  - camera.stop() stops the live stream
   - the Raspberry Pi's livestream can be accessed by typing "http://10.84.241.104:8081" into a web browser
 
 
