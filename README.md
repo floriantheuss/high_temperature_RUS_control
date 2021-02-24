@@ -9,7 +9,7 @@ i.e. connection to a Raspberry Pie to perform the following tasks:
 ## General Remarks
 
 General access:
-  - from your terminal, you can access the Pi's terminal by typing: ssh pi@10.84.241.104 (ssh pi@raspberrypi.lassp.cornell.edu is also ok) - the password is: chill
+  - from your terminal, you can access the Pi's terminal by typing: ssh ****** (ssh ****** is also ok) - the password is: ******
   - the relevant python code is stored in "Documents/high_T_RUS". You can access this folder by typing "cd Documents/high_T_RUS" in the Raspberry Pi terminal
 
 some useful keywords to navigate the Linux terminal:
@@ -33,7 +33,7 @@ detailed information about the kinds of classes and functions defined for them c
   - camera = CameraModule()
   - camera.start() starts live stream
   - camera.stop() stops the live stream
-  - the Raspberry Pi's livestream can be accessed by typing "http://10.84.241.104:8081" into a web browser
+  - the Raspberry Pi's livestream can be accessed by typing "******" into a web browser
 
 
 ### about the stepper motor:
